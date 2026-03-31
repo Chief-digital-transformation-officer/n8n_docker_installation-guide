@@ -174,7 +174,10 @@ def main() -> int:
     args = parser.parse_args()
 
     src = args.input.expanduser().resolve()
-    out = args.output.expanduser().resolve() if args.output else src.with_suffix(".pdf")
+    if args.output:
+        out = args.output.expanduser().resolve()
+    else:
+        out = Path.cwd() / src.with_suffix(".pdf").name
 
     if not src.is_file():
         print(f"Файл не найден: {src}", file=sys.stderr)
