@@ -74,9 +74,13 @@ pre {
   background: #0f172a;
   border-radius: 8px;
   padding: 1em 1.2em;
-  overflow-x: auto;
   margin: 1em 0;
   border-left: 4px solid #3b82f6;
+  max-width: 100%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 pre code {
   background: none;
@@ -85,6 +89,9 @@ pre code {
   color: #e2e8f0;
   font-size: 8.5pt;
   line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 blockquote {
