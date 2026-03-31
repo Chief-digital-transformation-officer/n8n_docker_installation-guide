@@ -51,23 +51,15 @@ ssh root@<IP адрес вашего сервера>
 
 ---
 
-## Шаг 3. Создать и запустить скрипт установки
+## Шаг 3. Скачать и запустить скрипт установки
 
-nano - текстовый редактор через который вы создаете мой файл установщик
+Скачайте скрипт прямо на сервер одной командой:
 
 ```bash
-nano n8n_setup.sh
+curl -fsSL https://raw.githubusercontent.com/Chief-digital-transformation-officer/n8n_docker_installation-guide/main/n8n_setup.sh -o n8n_setup.sh
 ```
 
-Вставляете содержимое файла `n8n_setup.sh` (Ctrl+V или Ctrl+shift+V в терминале), 
-
-далее сохраняете этот файл такой последовательностью команд на клавиаутер в редакторе nano
-
-1 - **Ctrl+O** - буква O на английском
-2 -  Enter 
-3 - Ctrl+X** - буква X на английском
-
-запускаете скрипт
+Запустите скрипт:
 
 ```bash
 bash n8n_setup.sh
